@@ -1,4 +1,4 @@
-# Proyecto-Integrador-Generador-de-pdf
+## Proyecto-Integrador-Generador-de-pdf
 
 
 Este proyecto permite generar reportes PDF a partir de archivos `.csv` utilizando una interfaz web construida con **Streamlit**. 
@@ -18,7 +18,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-3. Subir un archivo `.csv` válido (con cualquier estructura de columnas) y descargar el PDF generado.
+3. Subir un archivo `.csv` válido (con una estructura predeterminanda mostrada en el ejemplo de uso) y descargar el PDF generado.
 
 ---
 
@@ -115,3 +115,8 @@ Mouse,500
 Y descargar un PDF con el contenido formateado.
 
 ---
+
+## Diagrama UML
+
+![image](https://github.com/user-attachments/assets/4f3e2864-daef-446c-8b5a-f826b4ac6e84)
+
