@@ -118,5 +118,54 @@ Y descargar un PDF con el contenido formateado.
 
 ## Diagrama UML
 
-![image](https://github.com/user-attachments/assets/4f3e2864-daef-446c-8b5a-f826b4ac6e84)
+```mermaid
+classDiagram
+    class ReportBuilder {
+        +add_title(title)
+        +add_section(section)
+        +get_result()
+        +save(filename)
+    }
+    class PDFReportBuilder
+    class ReportDirector {
+        -builder: ReportBuilder
+        +construct_report(sections)
+    }
+    class SalesDataSource {
+        +get_data(): list
+    }
+    class CSVAdapter
+    class BaseReportGenerator {
+        +generate()
+        +get_sections(): list
+    }
+    class DetailedReport
+    class ReportComponent {
+        +render(): str
+    }
+    class Section {
+        -title: str
+        -children: list
+        +add(component)
+        +render()
+    }
+    class Text {
+        -content: str
+        +render()
+    }
+
+    ReportBuilder <|-- PDFReportBuilder
+    ReportDirector --> ReportBuilder
+    SalesDataSource <|-- CSVAdapter
+    BaseReportGenerator <|-- DetailedReport
+    ReportComponent <|-- Section
+    ReportComponent <|-- Text
+    Section --> ReportComponent : contains
+
+    class Pdf_Builder
+    Pdf_Builder --> CSVAdapter
+    Pdf_Builder --> DetailedReport
+    Pdf_Builder --> ReportDirector
+    Pdf_Builder --> PDFReportBuilder
+
 
