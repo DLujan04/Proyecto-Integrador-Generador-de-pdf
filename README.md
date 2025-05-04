@@ -65,13 +65,13 @@ Se logró una estructura clara y extensible para crear distintos estilos de repo
 
 ---
 
-### 4. **Adapter** (`CSVAdapter`, `SalesDataSource`)
+### 4. **Adapter** (`CSVAdapter`, `DataSource`)
 
 **Problema de diseño:**
 Los datos pueden venir de distintas fuentes (CSV, JSON, base de datos). Se necesitaba una forma común de acceder a ellos sin acoplar la lógica del generador a un formato específico.
 
 **Solución con el patrón:**
-Se definió la interfaz `SalesDataSource` con el método `get_data()`. `CSVAdapter` implementa esta interfaz y convierte archivos CSV a una lista de diccionarios.
+Se definió la interfaz `DataSource` con el método `get_data()`. `CSVAdapter` implementa esta interfaz y convierte archivos CSV a una lista de diccionarios.
 
 **Resultado:**
 El sistema es ahora extensible a nuevas fuentes de datos sin modificar la lógica del generador de reportes.
