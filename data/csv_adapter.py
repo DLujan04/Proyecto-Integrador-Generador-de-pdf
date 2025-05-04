@@ -1,7 +1,7 @@
 import csv
-from data.data_source import SalesDataSource
+from data.data_source import DataSource
 
-class CSVAdapter(SalesDataSource):
+class CSVAdapter(DataSource):
     def __init__(self, filepath):
         self.filepath = filepath
 

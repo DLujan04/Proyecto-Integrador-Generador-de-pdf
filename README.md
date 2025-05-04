@@ -131,7 +131,7 @@ classDiagram
         -builder: ReportBuilder
         +construct_report(sections)
     }
-    class SalesDataSource {
+    class DataSource {
         +get_data(): list
     }
     class CSVAdapter
@@ -156,7 +156,7 @@ classDiagram
 
     ReportBuilder <|-- PDFReportBuilder
     ReportDirector --> ReportBuilder
-    SalesDataSource <|-- CSVAdapter
+    DataSource <|-- CSVAdapter
     BaseReportGenerator <|-- DetailedReport
     ReportComponent <|-- Section
     ReportComponent <|-- Text

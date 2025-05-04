@@ -1,4 +1,3 @@
-# builder/builder_interface.py
 from abc import ABC, abstractmethod
 
 class ReportBuilder(ABC):
