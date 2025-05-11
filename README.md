@@ -112,9 +112,14 @@ Mouse,500
 ```
 (este formato permite un acomodo mas uniforme del pdf)
 
-*Siempre descarga el documento con la denotacion de .csv, si esto no se hace, el archivo no se exportara bien.
-
 Y descargar un PDF con el contenido formateado.
+
+IMPORTANTE:
+
+*Siempre sube en el generador un documento con la denotacion de .csv, si esto no se hace, el archivo no se exportara bien.
+
+*Los datos deben estar a partir de la primera fila del archivo, si la primera fila del csv esta vacia, los datos no 
+se exportaran con el formato correcto en el pdf generado.
 
 ---
 
