@@ -112,6 +112,8 @@ Mouse,500
 ```
 (este formato permite un acomodo mas uniforme del pdf)
 
+*Siempre descarga el documento con la denotacion de .csv, si esto no se hace, el archivo no se exportara bien.
+
 Y descargar un PDF con el contenido formateado.
 
 ---
